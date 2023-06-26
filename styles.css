@@ -1,0 +1,138 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.95rem;
+}
+
+:root {
+/* Primary */
+--bright-orange: hsl(31, 77%, 52%);
+--dark-cyan: hsl(184, 100%, 22%);
+--very-dark-cyan: hsl(179, 100%, 13%);
+
+/* Neutral */
+--transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+--very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons */
+}
+
+.car-types {
+    color: var(--transparent-white);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.car-type {
+    padding: 3em;
+}
+
+.car-type svg {
+    width: 75px;
+}
+
+.car-type h2 {
+    color: var(--very-light-gray);
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0.7em 0;
+}
+
+.car-type a {
+    text-decoration: none;
+    background-color: var(--very-light-gray);
+    display: inline-block;
+    margin-top: 2em;
+    padding: 1em 2em;
+    border-radius: 2em;
+}
+
+.car-type a:active {
+    color: var(--very-light-gray);
+    outline: 2px solid var(--very-light-gray);
+    background-color: transparent;
+}
+
+.sedans {
+    background-color: var(--bright-orange);
+}
+
+.sedans a {
+    color: var(--bright-orange);
+}
+
+.suvs {
+    background-color: var(--dark-cyan);
+}
+
+.suvs a {
+    color: var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+.luxury a {
+    color: var(--very-dark-cyan);
+}
+
+.attribution {
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (any-hover: hover) {
+    .car-type svg:hover path {
+        transform: translateX(10px);
+        transition: .5s linear;
+    }
+
+    .car-types a:hover {
+        color: var(--very-light-gray);
+        outline: 2px solid var(--very-light-gray);
+        background-color: transparent;
+    }
+
+    .car-types a:active {
+        color: var(--very-light-gray);
+        outline: 2px solid var(--very-light-gray);
+        background-color: hsla(0, 0%, 100%, 0.25);
+    }
+}
+
+@media (min-width: 700px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .car-types {
+        display: flex;
+        max-width: 1000px;
+    }
+
+    .car-type {
+        flex: 1;
+        position: relative;
+        padding-bottom: 8em;
+    }
+
+    .car-type a {
+        position: absolute;
+        bottom: 2em;
+        left: 3em;
+    }
+}
