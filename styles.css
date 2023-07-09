@@ -43,11 +43,17 @@ body {
     margin: 0.7em 0;
 }
 
+.car-type span {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 2em;
+    margin-top: 2em;
+}
+
 .car-type a {
     text-decoration: none;
     background-color: var(--very-light-gray);
     display: inline-block;
-    margin-top: 2em;
     padding: 1em 2em;
     border-radius: 2em;
 }
@@ -55,6 +61,7 @@ body {
 .car-type a:active {
     color: var(--very-light-gray);
     outline: 2px solid var(--very-light-gray);
+    outline-offset: -2px;
     background-color: transparent;
 }
 
@@ -100,6 +107,7 @@ body {
     .car-types a:hover {
         color: var(--very-light-gray);
         outline: 2px solid var(--very-light-gray);
+        outline-offset: -2px;
         background-color: transparent;
     }
 
